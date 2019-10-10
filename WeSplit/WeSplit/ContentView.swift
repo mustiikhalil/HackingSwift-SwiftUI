@@ -34,12 +34,10 @@ struct ContentView: View {
         NavigationView {
             Form {
                 Section {
-                    VStack(alignment: .leading) {
-                        Text("Number of people: \(actualNumberOfPeople)")
-                        Text("Amount: \(checkAmount)")
-                        Text("Total Per person: \(amountPerPerson, specifier: "%.2f")")
-                        Text("Total: $\(totalAmount, specifier: "%.2f")")
-                    }.padding(.horizontal, CGFloat(20.0))
+                    Text("Number of people: \(actualNumberOfPeople)")
+                    Text("Amount: \(checkAmount)")
+                    Text("Total Per person: \(amountPerPerson, specifier: "%.2f")")
+                    Text("Total: $\(totalAmount, specifier: "%.2f")")
                 }
                 Section {
                     TextField("Check amount", text: $checkAmount).keyboardType(.decimalPad)
