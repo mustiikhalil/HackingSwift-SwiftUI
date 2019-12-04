@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     @State private var randomCountry = Int.random(in: 0...2)
     
-    @State private var showScore = false
+    @State private var incorrectFlag = false
     @State private var score = 0
     
     var body: some View {
@@ -33,13 +33,14 @@ struct ContentView: View {
                             .renderingMode(.original).clipShape(Capsule()).overlay(Capsule().stroke(Color.black, lineWidth: 1)).shadow(color: .black, radius: 2)
                     }
                 }
+                Text("score: \(score)")
                 Spacer()
             }
-        }.alert(isPresented: $showScore) {
+        }.alert(isPresented: $incorrectFlag) {
             Alert(title: Text("\(score)"),
                   message: Text("Do you wanna play more???"),
-                  dismissButton: .default(Text("Ask"), action: {
-                    self.askQuestion()
+                  dismissButton: .default(Text("Reset"), action: {
+                    self.reset()
                   }))
         }
     }
@@ -47,8 +48,15 @@ struct ContentView: View {
     func check(_ flag: Int) {
         if flag == randomCountry {
             score += 1
+            askQuestion()
+        } else {
+            incorrectFlag = true
         }
-        showScore = true
+    }
+    
+    func reset() {
+        score = 0
+        askQuestion()
     }
     
     func askQuestion() {
