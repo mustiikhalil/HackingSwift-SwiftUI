@@ -13,6 +13,7 @@
 		DF582B8423A4240E006D5491 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF582B8323A4240E006D5491 /* Assets.xcassets */; };
 		DF582B8723A4240E006D5491 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF582B8623A4240E006D5491 /* Preview Assets.xcassets */; };
 		DF582B8A23A4240E006D5491 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF582B8823A4240E006D5491 /* LaunchScreen.storyboard */; };
+		DFCAB98D23A81DBD008B4A2C /* BetterRest_trained.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB98C23A81DBD008B4A2C /* BetterRest_trained.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DF582B8623A4240E006D5491 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF582B8923A4240E006D5491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF582B8B23A4240E006D5491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFCAB98C23A81DBD008B4A2C /* BetterRest_trained.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BetterRest_trained.mlmodel; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				DF582B7D23A4240C006D5491 /* AppDelegate.swift */,
+				DFCAB98C23A81DBD008B4A2C /* BetterRest_trained.mlmodel */,
 				DF582B7F23A4240C006D5491 /* SceneDelegate.swift */,
 				DF582B8123A4240C006D5491 /* ContentView.swift */,
 				DF582B8323A4240E006D5491 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFCAB98D23A81DBD008B4A2C /* BetterRest_trained.mlmodel in Sources */,
 				DF582B7E23A4240C006D5491 /* AppDelegate.swift in Sources */,
 				DF582B8023A4240C006D5491 /* SceneDelegate.swift in Sources */,
 				DF582B8223A4240C006D5491 /* ContentView.swift in Sources */,
