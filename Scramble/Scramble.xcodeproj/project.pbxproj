@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF30402023AB906F00BEEF36 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = DF30401F23AB906F00BEEF36 /* start.txt */; };
+		DF30402223AB971F00BEEF36 /* ScrambleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30402123AB971F00BEEF36 /* ScrambleViewModel.swift */; };
+		DF30402423AB973A00BEEF36 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30402323AB973A00BEEF36 /* Cell.swift */; };
 		DFEB1E4023AAC4120027AFFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB1E3F23AAC4120027AFFE /* AppDelegate.swift */; };
 		DFEB1E4223AAC4120027AFFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB1E4123AAC4120027AFFE /* SceneDelegate.swift */; };
-		DFEB1E4423AAC4120027AFFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB1E4323AAC4120027AFFE /* ContentView.swift */; };
+		DFEB1E4423AAC4120027AFFE /* ScrambleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB1E4323AAC4120027AFFE /* ScrambleView.swift */; };
 		DFEB1E4623AAC4140027AFFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFEB1E4523AAC4140027AFFE /* Assets.xcassets */; };
 		DFEB1E4923AAC4140027AFFE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFEB1E4823AAC4140027AFFE /* Preview Assets.xcassets */; };
 		DFEB1E4C23AAC4140027AFFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEB1E4A23AAC4140027AFFE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF30401F23AB906F00BEEF36 /* start.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
+		DF30402123AB971F00BEEF36 /* ScrambleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrambleViewModel.swift; sourceTree = "<group>"; };
+		DF30402323AB973A00BEEF36 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		DFEB1E3C23AAC4120027AFFE /* Scramble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scramble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEB1E3F23AAC4120027AFFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFEB1E4123AAC4120027AFFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DFEB1E4323AAC4120027AFFE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DFEB1E4323AAC4120027AFFE /* ScrambleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrambleView.swift; sourceTree = "<group>"; };
 		DFEB1E4523AAC4140027AFFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFEB1E4823AAC4140027AFFE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DFEB1E4B23AAC4140027AFFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,12 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				DFEB1E3F23AAC4120027AFFE /* AppDelegate.swift */,
-				DFEB1E4123AAC4120027AFFE /* SceneDelegate.swift */,
-				DFEB1E4323AAC4120027AFFE /* ContentView.swift */,
 				DFEB1E4523AAC4140027AFFE /* Assets.xcassets */,
-				DFEB1E4A23AAC4140027AFFE /* LaunchScreen.storyboard */,
+				DF30402323AB973A00BEEF36 /* Cell.swift */,
 				DFEB1E4D23AAC4140027AFFE /* Info.plist */,
+				DFEB1E4A23AAC4140027AFFE /* LaunchScreen.storyboard */,
 				DFEB1E4723AAC4140027AFFE /* Preview Content */,
+				DFEB1E4123AAC4120027AFFE /* SceneDelegate.swift */,
+				DFEB1E4323AAC4120027AFFE /* ScrambleView.swift */,
+				DF30402123AB971F00BEEF36 /* ScrambleViewModel.swift */,
+				DF30401F23AB906F00BEEF36 /* start.txt */,
 			);
 			path = Scramble;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFEB1E4C23AAC4140027AFFE /* LaunchScreen.storyboard in Resources */,
+				DF30402023AB906F00BEEF36 /* start.txt in Resources */,
 				DFEB1E4923AAC4140027AFFE /* Preview Assets.xcassets in Resources */,
 				DFEB1E4623AAC4140027AFFE /* Assets.xcassets in Resources */,
 			);
@@ -148,7 +158,9 @@
 			files = (
 				DFEB1E4023AAC4120027AFFE /* AppDelegate.swift in Sources */,
 				DFEB1E4223AAC4120027AFFE /* SceneDelegate.swift in Sources */,
-				DFEB1E4423AAC4120027AFFE /* ContentView.swift in Sources */,
+				DF30402423AB973A00BEEF36 /* Cell.swift in Sources */,
+				DF30402223AB971F00BEEF36 /* ScrambleViewModel.swift in Sources */,
+				DFEB1E4423AAC4120027AFFE /* ScrambleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
