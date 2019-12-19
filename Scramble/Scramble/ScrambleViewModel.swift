@@ -17,6 +17,7 @@ class ScrambleViewModel: ObservableObject {
     @Published var words: [String] = []
     @Published var selectedWord = ""
     @Published var errorShowed = false
+    @Published var score = 0
     
     var errorMessage = ""
     
@@ -32,11 +33,16 @@ class ScrambleViewModel: ObservableObject {
             presentError(message: "Some error")
             return
         }
+        guard isAccepted else {
+            presentError(message: "Word is the same or less than three")
+            return
+        }
         guard isReal else {
             presentError(message: "That's not a real world")
             return
         }
         words.append(answered)
+        score += input.count
         input = ""
     }
     
@@ -50,6 +56,7 @@ class ScrambleViewModel: ObservableObject {
     }
     
     func loadWord() {
+        words = []
         selectedWord = wordsCollections.randomElement() ?? "Skyrim"
     }
     
@@ -70,6 +77,10 @@ class ScrambleViewModel: ObservableObject {
             }
         }
         return true
+    }
+    
+    var isAccepted: Bool {
+        !(input == selectedWord) && input.count > 3
     }
     
     var isReal: Bool {

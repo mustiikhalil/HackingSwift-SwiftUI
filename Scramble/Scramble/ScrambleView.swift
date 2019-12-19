@@ -27,10 +27,18 @@ struct ScrambleView: View {
                         }
                     }
                 }
+                Section {
+                    Text("root: \(viewModel.selectedWord) score: \(viewModel.score)")
+                }
             }
             .navigationBarTitle("Scramble")
-            .alert(isPresented: $viewModel.errorShowed) {
-                Alert(title: Text("Error"), message: Text(viewModel.errorMessage), dismissButton: .default(Text("OK")))
+            .navigationBarItems(trailing:
+                Button(action: viewModel.loadWord) {
+                    Text("Refresh")
+                }
+            )
+                .alert(isPresented: $viewModel.errorShowed) {
+                    Alert(title: Text("Error"), message: Text(viewModel.errorMessage), dismissButton: .default(Text("OK")))
             }
         }
         .onAppear(perform: viewModel.startGame)
